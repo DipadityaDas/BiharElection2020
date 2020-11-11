@@ -8,3 +8,6 @@ url = "https://results.eci.gov.in/ACTRENDS2020/partywiseresult-S04.htm"
 
 # Make a GET request to fetch the raw HTML content
 htm_content = requests.get(url).text
+
+# Parse the html content
+soup = BeautifulSoup(htm_content, "html.parser")

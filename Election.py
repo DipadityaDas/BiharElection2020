@@ -29,3 +29,10 @@ for th in BE_table_data[2].find_all("th"):
     row.append(th.text)
 
 data.append(row)
+
+#Fetching all the Party Data (Won, leading and Total)
+for x in range(3, 16):
+    row = []
+    for td in BE_table_data[x].find_all("td"):
+        row.append(td.text)
+    data.append(row)

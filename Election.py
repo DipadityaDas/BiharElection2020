@@ -3,7 +3,7 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
-# Official Website of Election Commission of India 
+# Official Website of Election Commission of India
 url = "https://results.eci.gov.in/ACTRENDS2020/partywiseresult-S04.htm"
 
 # Make a GET request to fetch the raw HTML content
@@ -30,14 +30,19 @@ for th in BE_table_data[2].find_all("th"):
 
 data.append(row)
 
-#Fetching all the Party Data (Won, leading and Total)
+# Fetching all the Party Data (Won, leading and Total)
 for x in range(3, 16):
     row = []
     for td in BE_table_data[x].find_all("td"):
         row.append(td.text)
     data.append(row)
 
-# Create a Pandas DataFrame of all the raw data
+# Creating a Pandas DataFrame of all the raw data
 raw_data = pd.DataFrame(data[1:15], columns=data[0])
 raw_data.set_index(pd.Index(['AIMIM', 'BSP', 'BJP', 'CPI', 'CPI(M)', 'CPI(ML)',
                              'HAMS', 'IND', 'INC', 'JD(U)', 'LJSP', 'RJD', 'VSIP']), inplace=True)
+
+# Creating another Pandas DataFrame df without Total
+df = pd.DataFrame(data[1:14], columns=data[0])
+df.set_index(pd.Index(['AIMIM', 'BSP', 'BJP', 'CPI', 'CPI(M)', 'CPI(ML)',
+                       'HAMS', 'IND', 'INC', 'JD(U)', 'LJSP', 'RJD', 'VSIP']), inplace=True)

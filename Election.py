@@ -14,3 +14,6 @@ soup = BeautifulSoup(htm_content, "html.parser")
 
 # print the parsed data of html
 # print(soup.prettify())
+
+# Scaning the Entire HTML and finding <table border="1"></table> and returns the result in HTML format
+BE_table = soup.find("table", attrs={"border": "1"})

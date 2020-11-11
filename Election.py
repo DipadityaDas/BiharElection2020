@@ -59,3 +59,9 @@ Mahagatbandhan = df.loc[["CPI", "CPI(M)", "CPI(ML)", "INC", "RJD"], :]
 Mahagatbandhan['Won'] = Mahagatbandhan['Won'].astype('int')
 Mahagatbandhan['Leading'] = Mahagatbandhan['Leading'].astype('int')
 Mahagatbandhan['Total'] = Mahagatbandhan['Total'].astype('int')
+
+# Creating a Dataframe for NDA
+NDA = df.loc[['BJP', 'HAMS', 'JD(U)', 'LJSP', 'VSIP'], :]
+NDA['Won'] = NDA['Won'].astype('int')
+NDA['Leading'] = NDA['Leading'].astype('int')
+NDA['Total'] = NDA['Total'].astype('int')

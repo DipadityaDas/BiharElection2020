@@ -36,3 +36,8 @@ for x in range(3, 16):
     for td in BE_table_data[x].find_all("td"):
         row.append(td.text)
     data.append(row)
+
+# Create a Pandas DataFrame of all the raw data
+raw_data = pd.DataFrame(data[1:15], columns=data[0])
+raw_data.set_index(pd.Index(['AIMIM', 'BSP', 'BJP', 'CPI', 'CPI(M)', 'CPI(ML)',
+                             'HAMS', 'IND', 'INC', 'JD(U)', 'LJSP', 'RJD', 'VSIP']), inplace=True)

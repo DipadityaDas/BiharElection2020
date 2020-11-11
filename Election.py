@@ -61,7 +61,7 @@ Mahagatbandhan['Leading'] = Mahagatbandhan['Leading'].astype('int')
 Mahagatbandhan['Total'] = Mahagatbandhan['Total'].astype('int')
 
 # Creating a Dataframe for NDA
-NDA = df.loc[['BJP', 'HAMS', 'JD(U)', 'LJSP', 'VSIP'], :]
+NDA = df.loc[['BJP', 'HAMS', 'JD(U)', 'VSIP'], :]
 NDA['Won'] = NDA['Won'].astype('int')
 NDA['Leading'] = NDA['Leading'].astype('int')
 NDA['Total'] = NDA['Total'].astype('int')
@@ -75,3 +75,9 @@ print("{i}\n{x}\n{i}\n{y}\n{i}".format(i="-"*90, x=Mahagatbandhan, y=NDA))
 # Printing the Results
 print("Mahagatbandhan  --> Won: {},  Leading: {} and Total: {}\n\nNDA             --> Won: {},  Leading: {} and Total: {}".format(
     Mahagatbandhan.Won.sum(), Mahagatbandhan.Leading.sum(), Mahagatbandhan.Total.sum(), NDA.Won.sum(), NDA.Leading.sum(), NDA.Total.sum()))
+
+# Creating a PIE Chart
+col = ['#C8FD36', '#000078', '#FF6600', '#FF3366', '#B5307C', '#F538D0',
+       '#B26A98', '#AA0078', '#117700', '#003366', '#0093DD', '#008000', '#8391AB']
+plt.pie(df['Total'], labels=df.index, radius=1.5, colors=col)
+plt.show()

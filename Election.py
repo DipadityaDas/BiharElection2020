@@ -20,3 +20,12 @@ BE_table = soup.find("table", attrs={"border": "1"})
 
 # Scaning all the tr tags inside the table tag
 BE_table_data = BE_table.tbody.find_all("tr")
+
+data = []
+row = []
+
+# Fetching all the Heading of the table
+for th in BE_table_data[2].find_all("th"):
+    row.append(th.text)
+
+data.append(row)

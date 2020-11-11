@@ -65,3 +65,6 @@ NDA = df.loc[['BJP', 'HAMS', 'JD(U)', 'LJSP', 'VSIP'], :]
 NDA['Won'] = NDA['Won'].astype('int')
 NDA['Leading'] = NDA['Leading'].astype('int')
 NDA['Total'] = NDA['Total'].astype('int')
+
+# Printing the logo and raw_data
+print(main_logo, "="*90, raw_data, sep="\n")

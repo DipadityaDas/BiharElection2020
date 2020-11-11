@@ -68,3 +68,6 @@ NDA['Total'] = NDA['Total'].astype('int')
 
 # Printing the logo and raw_data
 print(main_logo, "="*90, raw_data, sep="\n")
+
+# Printing the Results of MahaMahagatbandhan and NDA
+print("{i}\n{x}\n{i}\n{y}\n{i}".format(i = "-"*90, x = Mahagatbandhan, y = NDA))

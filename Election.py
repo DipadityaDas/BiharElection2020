@@ -17,3 +17,6 @@ soup = BeautifulSoup(htm_content, "html.parser")
 
 # Scaning the Entire HTML and finding <table border="1"></table> and returns the result in HTML format
 BE_table = soup.find("table", attrs={"border": "1"})
+
+# Scaning all the tr tags inside the table tag
+BE_table_data = BE_table.tbody.find_all("tr")

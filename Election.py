@@ -3,6 +3,13 @@ import requests
 import pandas as pd
 import matplotlib.pyplot as plt
 
+main_logo = """  ____  _ _                  _____ _           _   _             
+ | __ )(_) |__   __ _ _ __  | ____| | ___  ___| |_(_) ___  _ __  
+ |  _ \| | '_ \ / _` | '__| |  _| | |/ _ \/ __| __| |/ _ \| '_ \ 
+ | |_) | | | | | (_| | |    | |___| |  __/ (__| |_| | (_) | | | |
+ |____/|_|_| |_|\__,_|_|    |_____|_|\___|\___|\__|_|\___/|_| | |
+"""
+
 # Official Website of Election Commission of India
 url = "https://results.eci.gov.in/ACTRENDS2020/partywiseresult-S04.htm"
 

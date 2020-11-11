@@ -11,3 +11,6 @@ htm_content = requests.get(url).text
 
 # Parse the html content
 soup = BeautifulSoup(htm_content, "html.parser")
+
+# print the parsed data of html
+# print(soup.prettify())

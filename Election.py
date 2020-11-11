@@ -53,3 +53,9 @@ raw_data.set_index(pd.Index(['AIMIM', 'BSP', 'BJP', 'CPI', 'CPI(M)', 'CPI(ML)',
 df = pd.DataFrame(data[1:14], columns=data[0])
 df.set_index(pd.Index(['AIMIM', 'BSP', 'BJP', 'CPI', 'CPI(M)', 'CPI(ML)',
                        'HAMS', 'IND', 'INC', 'JD(U)', 'LJSP', 'RJD', 'VSIP']), inplace=True)
+
+# Creating a Dataframe for Mahagatbandhan
+Mahagatbandhan = df.loc[["CPI", "CPI(M)", "CPI(ML)", "INC", "RJD"], :]
+Mahagatbandhan['Won'] = Mahagatbandhan['Won'].astype('int')
+Mahagatbandhan['Leading'] = Mahagatbandhan['Leading'].astype('int')
+Mahagatbandhan['Total'] = Mahagatbandhan['Total'].astype('int')

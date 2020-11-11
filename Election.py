@@ -70,4 +70,8 @@ NDA['Total'] = NDA['Total'].astype('int')
 print(main_logo, "="*90, raw_data, sep="\n")
 
 # Printing the Results of MahaMahagatbandhan and NDA
-print("{i}\n{x}\n{i}\n{y}\n{i}".format(i = "-"*90, x = Mahagatbandhan, y = NDA))
+print("{i}\n{x}\n{i}\n{y}\n{i}".format(i="-"*90, x=Mahagatbandhan, y=NDA))
+
+# Printing the Results
+print("Mahagatbandhan  --> Won: {},  Leading: {} and Total: {}\n\nNDA             --> Won: {},  Leading: {} and Total: {}".format(
+    Mahagatbandhan.Won.sum(), Mahagatbandhan.Leading.sum(), Mahagatbandhan.Total.sum(), NDA.Won.sum(), NDA.Leading.sum(), NDA.Total.sum()))
